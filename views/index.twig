@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+	<div id="path">
+		<label for="txtpath">Path:
+		</label>
+		<input type="text" name="txtpath" id="txtpath" value="/Users/guerrato/Pictures"/>
+		<button id="getdirsbtn">Carregar arquivos</button>
+	</div>
+	<div class="wrap">
+		<div id="tree-wrap">
+			<ul id="pathtreeul" role="tree" aria-labelledby="tree_label"></ul>
+		</div>
+		<div id="img-preview" class="img-preview" style="background-image: url('/images/img.jpg')">
+			<img id="img-aux" src="" class="hidden" />
+			<p>
+				<button id="copyBtn">Copy this image</button>
+			</p>
+		</div>
+
+		<script src="/javascripts/apis.js"></script>
+		<script src="/javascripts/tree.js"></script>
+		<script src="/javascripts/treeitem.js"></script>
+		<script src="/javascripts/treeitemClick.js"></script>
+		<script src="/javascripts/behaviour.js"></script>
+	</div>
+{% endblock %}

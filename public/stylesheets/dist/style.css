@@ -1,0 +1,70 @@
+body {
+  padding: 15px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body a {
+  color: #00B7FF;
+}
+body > #path {
+  margin-bottom: 10px;
+}
+body div.wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  height: calc(100% - 40px);
+}
+body div.wrap > div {
+  padding: 10px;
+}
+body div.wrap > div.img-preview {
+  height: calc(100vh - 100px);
+  background-size: cover;
+  flex-grow: 3;
+}
+body div.wrap > div.img-preview > img {
+  display: none;
+}
+body div.wrap > div#tree-wrap > ul[role=tree] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body div.wrap > div#tree-wrap [role=treeitem].doc::before {
+  content: url("../../images/file.png");
+}
+body div.wrap > div#tree-wrap [role=treeitem].doc::before {
+  content: url("../../images/file.png");
+}
+body div.wrap > div#tree-wrap [role=treeitem][aria-expanded=false] > ul {
+  display: none;
+}
+body div.wrap > div#tree-wrap [role=treeitem][aria-expanded=true] > ul {
+  display: block;
+}
+body div.wrap > div#tree-wrap [role=treeitem][aria-expanded=false] > span::before {
+  content: url("../../images/closed.png");
+}
+body div.wrap > div#tree-wrap [role=treeitem][aria-expanded=true] > span::before {
+  content: url("../../images/open.png");
+}
+body div.wrap > div#tree-wrap [role=treeitem],
+body div.wrap > div#tree-wrap [role=treeitem] span {
+  margin: 0;
+  padding: 0.125em;
+  border: 2px transparent solid;
+  display: block;
+}
+body div.wrap > div#tree-wrap [role=treeitem]:focus {
+  outline: 0;
+}
+body div.wrap > div#tree-wrap [role=treeitem].focus,
+body div.wrap > div#tree-wrap [role=treeitem] span.focus {
+  border-color: black;
+  background-color: #eee;
+}
+body div.wrap > div#tree-wrap [role=treeitem].hover,
+body div.wrap > div#tree-wrap [role=treeitem] span:hover {
+  background-color: #ddd;
+}
