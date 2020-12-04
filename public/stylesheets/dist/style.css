@@ -30,6 +30,8 @@ body div.wrap > div#tree-wrap > ul[role=tree] {
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
 }
 body div.wrap > div#tree-wrap [role=treeitem].doc::before {
   content: url("../../images/file.png");
