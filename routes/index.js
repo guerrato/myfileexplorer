@@ -14,8 +14,8 @@ router.get('/listdirs', async (req, res, next) => {
   res.send(dirs)
 })
 
-router.get('/readimg', async (req, res, next) => {
-  const { path } = req.query
+router.post('/readimg', async (req, res, next) => {
+  const { path } = req.body
 
   const data = await fileService.readFile(path)
   res.send(data)

@@ -26,7 +26,7 @@ const clickRefresh = () => {
       }
 
       if (treeitem.classList.contains('doc')) {
-        api('GET', `${baseApi}/readimg?path=${label.trim()}`).then(img => {
+        api('POST', `${baseApi}/readimg`, JSON.stringify({ path: label.trim() })).then(img => {
           document.getElementById('img-preview').style.backgroundImage = `url('${img}')`
           document.getElementById('img-aux').src = img
         })
