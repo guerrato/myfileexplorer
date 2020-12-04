@@ -9,20 +9,20 @@ const listDirRec = async directory => {
 
         files.forEach(async file => {
             let children = []
-            if (fs.lstatSync(`${directory}/${file}`).isFile()) {
+            if (fs.lstatSync(`${directory}\\${file}`).isFile()) {
                 fileList.push({
                     name: file,
                     type: 'doc',
-                    path: `${directory}/${file}`,
+                    path: `${directory}\\${file}`,
                     children
                 })
             }
-            if (fs.lstatSync(`${directory}/${file}`).isDirectory()) {
+            if (fs.lstatSync(`${directory}\\${file}`).isDirectory()) {
                 fileList.push({
                     name: file,
                     type: 'dir',
-                    path: `${directory}/${file}`,
-                    children: await listDirRec(`${directory}/${file}`)
+                    path: `${directory}\\${file}`,
+                    children: await listDirRec(`${directory}\\${file}`)
                 })
             }
         })
